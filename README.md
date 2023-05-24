@@ -11,3 +11,7 @@ app_file: app.py
 
 ### Main Repo
 https://github.com/artidoro/qlora
+
+### Models
+https://huggingface.co/timdettmers/guanaco-13b
+https://huggingface.co/decapoda-research/llama-13b-hf
