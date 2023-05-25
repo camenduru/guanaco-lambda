@@ -17,8 +17,8 @@ https://github.com/artidoro/qlora
 
 ### Models
 A10  <br />
-https://huggingface.co/timdettmers/guanaco-7b (Thansk to timdettmers ❤) <br />
-https://huggingface.co/decapoda-research/llama-7b-hf  (Thansk to decapoda-research ❤) <br />
+https://huggingface.co/timdettmers/guanaco-7b (Thanks to timdettmers ❤) <br />
+https://huggingface.co/decapoda-research/llama-7b-hf  (Thanks to decapoda-research ❤) <br />
 H100  <br />
-https://huggingface.co/timdettmers/guanaco-33b  (Thansk to timdettmers ❤) <br />
-https://huggingface.co/decapoda-research/llama-30b-hf  (Thansk to decapoda-research ❤) <br />
+https://huggingface.co/timdettmers/guanaco-33b  (Thanks to timdettmers ❤) <br />
+https://huggingface.co/decapoda-research/llama-30b-hf  (Thanks to decapoda-research ❤) <br />
