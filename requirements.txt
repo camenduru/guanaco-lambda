@@ -290,7 +290,6 @@ pyrsistent==0.19.3
 PySocks==1.7.1
 pytensor==2.10.1
 pytest==7.2.2
-python-apt==0.0.0
 python-dateutil==2.8.2
 python-louvain==0.16
 python-multipart==0.0.6
