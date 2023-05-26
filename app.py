@@ -2,6 +2,9 @@ import os
 os.system(f"git lfs install")
 os.system(f"cp /home/demo/venv/lib/python3.8/site-packages/bitsandbytes/libbitsandbytes_cuda118.so /home/demo/venv/lib/python3.8/site-packages/bitsandbytes/libbitsandbytes_cpu.so")
 
+os.chdir(f"/home/demo/source")
+os.system(f"pip install -r requirements.txt")
+
 # Load the model.
 # Note: It can take a while to download LLaMA and add the adapter modules.
 # You can also use the 13B model by loading in 4bits.
