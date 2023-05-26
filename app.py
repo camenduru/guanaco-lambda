@@ -21,7 +21,7 @@ print(f"Starting to load the model {model_name} into memory")
 
 m = AutoModelForCausalLM.from_pretrained(
     model_name,
-    load_in_4bit=True,
+    load_in_8bit=True,
     torch_dtype=torch.bfloat16,
     device_map={"": 0}
 )
