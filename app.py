@@ -13,14 +13,15 @@ import torch
 # from peft import PeftModel 
 from transformers import AutoModelForCausalLM, AutoTokenizer, LlamaTokenizer, StoppingCriteria, StoppingCriteriaList, TextIteratorStreamer
 
-model_name = "decapoda-research/llama-7b-hf"
+model_name = "timdettmers/guanaco-33b-merged"
+# model_name = "decapoda-research/llama-7b-hf"
 # adapters_name = 'timdettmers/guanaco-7b'
 
 print(f"Starting to load the model {model_name} into memory")
 
 m = AutoModelForCausalLM.from_pretrained(
     model_name,
-    #load_in_4bit=True,
+    load_in_4bit=True,
     torch_dtype=torch.bfloat16,
     device_map={"": 0}
 )
