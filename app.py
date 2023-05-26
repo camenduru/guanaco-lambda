@@ -10,23 +10,22 @@ os.system(f"pip install -r requirements.txt")
 # You can also use the 13B model by loading in 4bits.
 
 import torch
-# from peft import PeftModel 
+from peft import PeftModel 
 from transformers import AutoModelForCausalLM, AutoTokenizer, LlamaTokenizer, StoppingCriteria, StoppingCriteriaList, TextIteratorStreamer
 
-model_name = "timdettmers/guanaco-33b-merged"
-# model_name = "decapoda-research/llama-7b-hf"
-# adapters_name = 'timdettmers/guanaco-7b'
+model_name = "decapoda-research/llama-13b-hf"
+adapters_name = 'timdettmers/guanaco-13b'
 
 print(f"Starting to load the model {model_name} into memory")
 
 m = AutoModelForCausalLM.from_pretrained(
     model_name,
-    load_in_8bit=True,
+    #load_in_4bit=True,
     torch_dtype=torch.bfloat16,
     device_map={"": 0}
 )
-# m = PeftModel.from_pretrained(m, adapters_name)
-# m = m.merge_and_unload()
+m = PeftModel.from_pretrained(m, adapters_name)
+m = m.merge_and_unload()
 tok = LlamaTokenizer.from_pretrained(model_name)
 tok.bos_token_id = 1
 
